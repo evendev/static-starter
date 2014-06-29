@@ -2,7 +2,10 @@
 html(lang='en')
   head
     meta(charset='utf-8')
-    title= site.title
+    if (!!title)
+      title #{ title } - #{ site.name }
+    else
+      title= site.name
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='assets/css/app.css')
 
@@ -12,7 +15,17 @@ html(lang='en')
 
   body
 
-    != yield
+    header.site-header
+      .container
+        .brand
+          a(href='index.html')= site.name
+
+    main.site-main
+      != yield
+
+    footer.site-footer
+      .container
+        p.copyright &copy; #{ new Date().getFullYear() } #{ site.name }
 
     script(src='ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script.

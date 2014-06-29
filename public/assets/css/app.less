@@ -1,21 +1,27 @@
 /* Import bootstrap less
+ *
 =============================================== */
 @import "../components/bootstrap/less/bootstrap.less";
 
 
 /* CSS Imports
 =============================================== */
-@import url(//fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@import url(//fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
 
 
 /* Brand Variables
 =============================================== */
+// colors
 @white: #fff;
 @black: #000;
 @brand-color-white: @white;
 @brand-color-black: @black;
 @brand-color-blue-light: #09f;
 @brand-color-blue-dark: darken(@brand-color-blue-light, 20%);
+// fonts
+@brand-font-family-sans-serif: "Open Sans", sans-serif;
+@brand-font-family-serif: "Droid Serif", serif;
 
 
 /* Bootstrap Overrides
@@ -28,8 +34,8 @@
 @link-color: @brand-color-blue-light;
 @link-hover-color: @brand-color-blue-dark;
 // fonts
-@font-family-serif: Georgia, serif;
-@font-family-sans-serif: "Droid Sans", sans-serif;
+@font-family-serif: @brand-font-family-serif;
+@font-family-sans-serif: @brand-font-family-sans-serif;
 
 
 /* Utility/Misc
@@ -44,3 +50,35 @@
 
 /* Globals
 =============================================== */
+
+
+/* Header
+=============================================== */
+
+
+/* Nav
+=============================================== */
+
+
+/* Footer
+=============================================== */
+
+
+/* Main
+=============================================== */
+
+
+/* Media Queries
+ *
+ * We're using bootstrap's breakpoint vars
+ *
+ * see http://getbootstrap.com/css/#grid
+=============================================== */
+
+@media (min-width: @screen-sm-min) {
+
+}
+
+@media (min-width: @screen-md-min) {
+
+}
