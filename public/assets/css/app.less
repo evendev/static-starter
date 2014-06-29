@@ -1,0 +1,46 @@
+/* Import bootstrap less
+=============================================== */
+@import "../components/bootstrap/less/bootstrap.less";
+
+
+/* CSS Imports
+=============================================== */
+@import url(//fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+
+/* Brand Variables
+=============================================== */
+@white: #fff;
+@black: #000;
+@brand-color-white: @white;
+@brand-color-black: @black;
+@brand-color-blue-light: #09f;
+@brand-color-blue-dark: darken(@brand-color-blue-light, 20%);
+
+
+/* Bootstrap Overrides
+ *
+ * see http://getbootstrap.com/customize/#less-variables
+=============================================== */
+// colors
+@body-bg: @brand-color-white;
+@text-color: @brand-color-black;
+@link-color: @brand-color-blue-light;
+@link-hover-color: @brand-color-blue-dark;
+// fonts
+@font-family-serif: Georgia, serif;
+@font-family-sans-serif: "Droid Sans", sans-serif;
+
+
+/* Utility/Misc
+=============================================== */
+.text-center {
+  .img-responsive {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Globals
+=============================================== */

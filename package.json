@@ -1,0 +1,6 @@
+{
+  "name": "static-starter",
+  "description": "Starter project using Harp, Bootstrap and gulp",
+  "private": true,
+  "devDependencies": {}
+}

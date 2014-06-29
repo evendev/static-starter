@@ -1,0 +1,21 @@
+!!!5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title= site.title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='assets/css/app.css')
+
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+
+  body
+
+    != yield
+
+    script(src='ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="assets/components/jquery/dist/jquery.min.js"><\/script>');
+    script(src='assets/components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='assets/js/app.js')
