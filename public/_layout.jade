@@ -2,11 +2,13 @@
 html(lang='en')
   head
     meta(charset='utf-8')
-    if (!!title)
-      title #{ title } - #{ site.name }
-    else
-      title= site.name
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title #{ !!title ? title + ' - ' + site.name : site.name }
+
+    meta(name='author', content='#{ !!author ? author : site.author }')
+    meta(name='description', content='#{ !!metaDescription ? metaDescription : site.metaDescription }')
+
     link(rel='stylesheet', href='assets/css/app.css')
 
     //if lt IE 9
@@ -15,10 +17,22 @@ html(lang='en')
 
   body
 
-    header.site-header
+    nav.navbar.navbar-default
       .container
-        .brand
-          a(href='index.html')= site.name
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-nav')
+            span.sr-only Navigate
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html')= site.name
+        .collapse.navbar-collapse
+          .navbar-right
+            ul.nav.navbar-nav
+              li(class="#{ (current.path == 'index') ? 'active' : ''}")
+                a(href='index.html') Home
+              li(class="#{ (current.path == 'about') ? 'active' : ''}")
+                a(href='about.html') About
 
     main.site-main
       != yield

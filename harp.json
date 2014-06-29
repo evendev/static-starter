@@ -1,7 +1,9 @@
 {
   "globals": {
     "site": {
-      "name": "Static Starter"
+      "name": "Static Starter",
+      "author": "John Doe",
+      "metaDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   }
 }
